@@ -124,10 +124,13 @@ class _ModuleTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if (label == 'Chat') {
-          Navigator.pushNamed(context, '/chat');
-        }
-      },
+  if (label == 'Chat') {
+    Navigator.pushNamed(context, '/chat');
+  }
+  if (label == 'Freepay') {
+    Navigator.pushNamed(context, '/freepay');
+  }
+},
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: Colors.black12),
