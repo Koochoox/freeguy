@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../../modules/profile/profile.dart';
+import '../../modules/settings/settings.dart';
 import '../../modules/dashboard/dashboard.dart';
 import '../../modules/chat/chat.dart';
 import '../../modules/freepay/freepay.dart';
@@ -17,6 +18,8 @@ class AppRouter {
   static const String moment = '/moment';
   static const String summit = '/summit';
   static const String flash = '/flash';
+  static const String profile = '/profile';
+  static const String settings = '/settings';
 
   static Route<dynamic> generate(RouteSettings settings) {
     switch (settings.name) {
@@ -36,6 +39,12 @@ class AppRouter {
 
       case flash:
         return _page(const Flash());
+        
+      case profile:
+        return _page(const Profile());
+
+      case settings:
+        return _page(const Settings());
 
       default:
         return _page(const Dashboard());
