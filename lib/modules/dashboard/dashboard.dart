@@ -133,6 +133,9 @@ class _ModuleTile extends StatelessWidget {
   if (label == 'Moment') {
     Navigator.pushNamed(context, '/moment');
   }
+  if (label == 'Summit') {
+    Navigator.pushNamed(context, '/summit');
+  }
 },
       child: Container(
         decoration: BoxDecoration(
