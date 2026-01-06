@@ -53,18 +53,37 @@ class _StatusHeader extends StatelessWidget {
 ///
 /// Quiet system pulse (placeholder)
 ///
-class _SystemPulse extends StatelessWidget {
+class _SystemPulse extends StatefulWidget {
   const _SystemPulse();
 
   @override
+  State<_SystemPulse> createState() => _SystemPulseState();
+}
+
+class _SystemPulseState extends State<_SystemPulse> {
+  @override
+  void initState() {
+    super.initState();
+    LivenessEngine.start();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 10,
-      height: 10,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.black,
-      ),
+    return ValueListenableBuilder<double>(
+      valueListenable: LivenessEngine.pulse,
+      builder: (context, scale, _) {
+        return Transform.scale(
+          scale: scale,
+          child: Container(
+            width: 10,
+            height: 10,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.black,
+            ),
+          ),
+        );
+      },
     );
   }
 }
