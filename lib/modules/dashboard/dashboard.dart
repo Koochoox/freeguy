@@ -124,6 +124,7 @@ class _ModuleTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+  if (onTap: () {
   if (label == 'Chat') {
     Navigator.pushNamed(context, '/chat');
   }
@@ -138,6 +139,12 @@ class _ModuleTile extends StatelessWidget {
   }
   if (label == 'Flash') {
     Navigator.pushNamed(context, '/flash');
+  }
+  if (label == 'Profile') {
+    Navigator.pushNamed(context, '/profile');
+  }
+  if (label == 'Settings') {
+    Navigator.pushNamed(context, '/settings');
   }
 },
       child: Container(
