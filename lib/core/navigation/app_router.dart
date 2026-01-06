@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../modules/dashboard/dashboard.dart';
 
+import '../../modules/chat/chat.dart';
+
 ///
 /// AppRouter
 /// Central navigation spine of Freeguy LIFE_OS
