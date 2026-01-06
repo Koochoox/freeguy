@@ -4,6 +4,8 @@ import '../../modules/dashboard/dashboard.dart';
 
 import '../../modules/chat/chat.dart';
 
+import '../../modules/freepay/freepay.dart';
+
 ///
 /// AppRouter
 /// Central navigation spine of Freeguy LIFE_OS
