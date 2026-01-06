@@ -130,6 +130,9 @@ class _ModuleTile extends StatelessWidget {
   if (label == 'Freepay') {
     Navigator.pushNamed(context, '/freepay');
   }
+  if (label == 'Moment') {
+    Navigator.pushNamed(context, '/moment');
+  }
 },
       child: Container(
         decoration: BoxDecoration(
