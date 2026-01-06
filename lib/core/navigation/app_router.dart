@@ -4,7 +4,7 @@ import '../../modules/dashboard/dashboard.dart';
 import '../../modules/chat/chat.dart';
 import '../../modules/freepay/freepay.dart';
 import '../../modules/moment/moment.dart';
-
+import '../../modules/summit/summit.dart';
 ///
 /// AppRouter
 /// Central navigation spine of Freeguy LIFE_OS
@@ -14,9 +14,12 @@ class AppRouter {
   static const String chat = '/chat';
   static const String freepay = '/freepay';
   static const String moment = '/moment';
+  static const String summit = '/summit';
 
   static Route<dynamic> generate(RouteSettings settings) {
     switch (settings.name) {
+        case summit:
+  return _page(const Summit());
       case dashboard:
         return _page(const Dashboard());
 
