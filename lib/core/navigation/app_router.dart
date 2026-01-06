@@ -6,6 +6,8 @@ import '../../modules/chat/chat.dart';
 
 import '../../modules/freepay/freepay.dart';
 
+import '../../modules/moment/moment.dart';
+
 ///
 /// AppRouter
 /// Central navigation spine of Freeguy LIFE_OS
@@ -21,6 +23,7 @@ class AppRouter {
       // Future modules plug in here
       // case '/chat': return _page(const Chat());
       // case '/freepay': return _page(const Freepay());
+      // case '/moment':return _page(const Moment());
 
       default:
         return _page(const Dashboard());
