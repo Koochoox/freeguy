@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'core/navigation/app_router.dart';
+import 'core/system/launch_freeze.dart';
 
 void main() {
+  LaunchFreeze.lock();
   runApp(const FreeguyApp());
 }
-
 class FreeguyApp extends StatelessWidget {
   const FreeguyApp({super.key});
 
